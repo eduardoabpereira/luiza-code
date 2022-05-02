@@ -4,7 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   target: 'web',
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [new HtmlWebpackPlugin({
+    publicPath: path.join(__dirname, 'dist/'),
+    template: path.join(__dirname, 'src', 'index.html')
+  })],
   module: {
     rules: [
       {
