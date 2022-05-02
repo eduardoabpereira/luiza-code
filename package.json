@@ -6,7 +6,7 @@
   "scripts": {
     "start:front": "webpack serve --open --config webpack.config.js",
     "start:back": "nodemon server.js",
-    "start": "concurrently \"set NODE_ENV=production\" \"node server.js\" \"webpack --config webpack.config.js\""
+    "start": "concurrently \"webpack --config webpack.config.js\" \"set NODE_ENV=production\" \"node server.js\""
   },
   "keywords": [],
   "author": "",
