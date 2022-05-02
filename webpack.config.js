@@ -9,6 +9,7 @@ module.exports = {
   target: 'web',
   plugins: [new HtmlWebpackPlugin({
     publicPath: buildPath,
+    inject: 'body',
     template: path.join(__dirname, 'src', 'index.html')
   })],
   module: {
