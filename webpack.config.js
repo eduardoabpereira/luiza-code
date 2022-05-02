@@ -5,8 +5,6 @@ module.exports = {
   target: 'web',
   module: {
     rules: [
-      // the 'transform-runtime' plugin tells Babel to
-      // require the runtime instead of inlining it.
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,

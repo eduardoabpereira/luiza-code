@@ -8,9 +8,13 @@ app.use(cors())
 app.use(express.json())
 app.use('dist', express.static(path.join(__dirname, '/')));
 
+const fullPath = process.env.NODE_ENV === 'production'
+  ? path.join(__dirname, 'dist', 'estrutura-dados', 'index.html')
+  : path.join(__dirname, 'dist', 'index.html')
+
 app.get('/', (req, res) => {
-  console.log(path.join(__dirname, 'dist', 'index.html'))
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'))
+  console.log(process.env.NODE_ENV, fullPath)
+  res.sendFile(fullPath)
 });
 
 app.get('/fila', async (req, res) => {
