@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start:front": "webpack serve --open --config webpack.config.js",
-    "start:back": "nodemon server.js"
+    "start:back": "nodemon server.js",
+    "prod": "node server.js"
   },
   "keywords": [],
   "author": "",
