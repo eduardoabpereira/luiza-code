@@ -4,7 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const buildPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
+  devtool: 'source-map',
   target: 'web',
   plugins: [new HtmlWebpackPlugin({
     publicPath: buildPath,
