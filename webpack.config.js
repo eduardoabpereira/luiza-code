@@ -1,17 +1,10 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 const buildPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
   mode: 'production',
   devtool: 'source-map',
   target: 'web',
-  plugins: [new HtmlWebpackPlugin({
-    publicPath: buildPath,
-    inject: 'body',
-    template: path.join(__dirname, 'src', 'index.html')
-  })],
   module: {
     rules: [
       {
