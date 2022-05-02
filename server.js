@@ -6,6 +6,10 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+app.get('/', function(req, res) {
+  res.sendFile('dist/index.html', { root: __dirname })
+});
+
 app.get('/fila', async (req, res) => {
   const uri = process.env.URI
   const client = new MongoClient(uri);

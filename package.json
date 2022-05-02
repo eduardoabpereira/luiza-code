@@ -6,7 +6,7 @@
   "scripts": {
     "start:front": "webpack serve --open --config webpack.config.js",
     "start:back": "nodemon server.js",
-    "start": "concurrently \"node server.js\" \"start:front\""
+    "start": "concurrently \"node server.js\" \"webpack --config webpack.config.js\""
   },
   "keywords": [],
   "author": "",
