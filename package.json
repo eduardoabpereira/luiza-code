@@ -6,7 +6,7 @@
   "scripts": {
     "start:front": "webpack serve --open --config webpack.config.js",
     "start:back": "nodemon server.js",
-    "start": "node server.js"
+    "start": " \"node server.js\" \"start:front\""
   },
   "keywords": [],
   "author": "",
@@ -25,6 +25,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "body-parser": "*",
+    "concurrently": "^7.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "*",
