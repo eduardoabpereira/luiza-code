@@ -13,8 +13,8 @@ const fullPath = process.env.NODE_ENV === 'production'
   : path.join(__dirname, 'dist', 'index.html')
 
 app.get('/', (req, res) => {
-  console.log(path.join(__dirname, 'src', 'index.html'))
-  res.sendFile(path.join(__dirname, 'src', 'index.html'))
+  console.log(path.join(__dirname, 'dist', 'index.html'))
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'))
 });
 
 app.get('/fila', async (req, res) => {
