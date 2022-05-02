@@ -1,13 +1,16 @@
 require('dotenv').config()
 const express = require('express')
+const path = require('path')
 const cors = require('cors')
 const { MongoClient } = require('mongodb')
 const app = express()
 app.use(cors())
 app.use(express.json())
+app.use('dist', express.static(path.join(__dirname, '/')));
 
-app.get('/', function(req, res) {
-  res.sendFile('dist/index.html', { root: __dirname })
+app.get('/', (req, res) => {
+  console.log(path.join(__dirname, 'dist', 'index.html'))
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'))
 });
 
 app.get('/fila', async (req, res) => {
