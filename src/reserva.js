@@ -1,7 +1,7 @@
 import axios from 'axios';
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 axios.defaults.headers['Access-Control-Allow-Methods'] = '*'
-const baseUrl = 'http://localhost:3000'
+const baseUrl = 'https://luiza-code-app.herokuapp.com'
 
 class Reserva {
   constructor(id, nome, qtde, price) {
